@@ -1,4 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;500&display=swap');
+:root {
+    
+}
 html {
     box-sizing: border-box;
 }
@@ -8,24 +11,48 @@ html {
     padding: 0;
     font-family: 'Ubuntu', sans-serif;
 }
+body {
+    background-color: #edf5e1;
+    overflow-y: auto;
+}
 .main {
     
 }
 .main >h3 {
     padding: 3.5vh 0;
     padding-left: 1vw;
-    color: grey;
-    font-size: 10vh;    
+    color: #05386b;
+    font-size: max(10vh, 30px);    
+    width: 100%;
 }
 .main .joke-container {
-    padding: 10px 1vw;
-    padding-left: 2.5vw;
+    padding: 10px 2.5vw;
+    /* padding-left: 2.5vw; */
     /* text-align: center; */
     margin: 0 1vw;
-    margin-bottom: 1vh;
-    border: 6px solid green;
-    font-size: 7vh;
+    margin-bottom: 3vh;
+    border: 6px solid #379683;
+    font-size: max(7vh, 20px);
+    /* font-size-adjust: calc(max(7vh)); */
+    
     border-radius: 10vh;
     color: rgb(101, 99, 99);
 }
 
+.button__div {
+    /* background-color: red; */
+    display: flex;
+    justify-content: end;
+}
+.joke-button {
+    /* background-color: purple; */
+    margin-right: 1.6vw;
+    font-size: 5vh;
+    padding: 2vh 2vw;
+    border: 2px solid #05386b;
+    border-radius: calc(20%);
+}
+.joke-button:hover {
+    transition: background-color 150ms ease-out;
+    background-color: #379683;
+}
