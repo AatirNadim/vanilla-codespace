@@ -1,0 +1,32 @@
+html {
+    box-sizing: border-box;
+    /* overflow-y: hidden; */
+    overflow-x: auto;
+}
+
+*, *:before, *:after {
+    box-sizing: inherit;
+    margin: 0;
+    padding: 0;
+    background-color: rgb(248, 224, 163);
+}
+::-webkit-scrollbar {
+    display: none;
+}
+.progress__bar {
+    position: fixed;
+    background-color: rgb(123, 94, 19);
+    top: 0;
+    left: 0;
+    height: 5px;
+    /* background: linear-gradient(217deg, rgba(255,0,0,.8), rgba(255,0,0,0) 70.71%),
+             linear-gradient(127deg, rgba(0,255,0,.8), rgba(0,255,0,0) 70.71%),
+             linear-gradient(336deg, rgba(0,0,255,.8), rgba(0,0,255,0) 70.71%); */
+    transition: 100ms ease-out;
+}
+.container {
+    margin: 12vh;
+    font-size: 3vh;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    color: rgb(123, 94, 19);
+}
