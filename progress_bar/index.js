@@ -4,7 +4,7 @@ const getProgress = () => {
     const fullHeight = document.body.clientHeight;
     const scrolled = window.scrollY;
     const percent = (scrolled/(fullHeight - tempHeight)) *100;
-    scrollBar.style.width = percent + '%';
+    scrollBar.style.width = percent*10/11 + '%';
 }
 
 window.addEventListener('scroll', getProgress);

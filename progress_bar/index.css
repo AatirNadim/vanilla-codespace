@@ -3,7 +3,11 @@ html {
     /* overflow-y: hidden; */
     overflow-x: auto;
 }
-
+body {
+    width: 100vw;
+    /* padding-right: 12vw; */
+    box-sizing: border-box;
+}
 *, *:before, *:after {
     box-sizing: inherit;
     margin: 0;
@@ -25,7 +29,7 @@ html {
     transition: 100ms ease-out;
 }
 .container {
-    margin: 12vh;
+    margin: 10.3vh;
     font-size: 3vh;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     color: rgb(123, 94, 19);
