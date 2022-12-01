@@ -22,7 +22,7 @@ const createPosts = (post, callback) => {
     setTimeout(() => {
         posts.push(post);
         callback();
-        console.log('check the nested settimeout    ')
+        console.log('check the nested settimeout')
     }, 2000); //this, here, is the reason the third post does not go up on the web page. although, the posts array, now has three posts, the rendition of posts array, displayed in the dom element only had two, because of less time delay
 }
 
