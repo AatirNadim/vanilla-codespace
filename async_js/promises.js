@@ -27,19 +27,31 @@ const createPosts = (post) => {
         }, 2000);
     });
 };
-createPosts(
-    {
-        title: 'title 3',
-        body : 'this is the body of the third post'
-    }
-).then(getPosts)
-.catch(err => {
-    console.log(err)
-})
-// when this method is called, the text (the reject function param) is displayed as common text and not an error response
 // createPosts(
 //     {
-//         title : 'thirs post',
+//         title: 'title 3',
 //         body : 'this is the body of the third post'
-//     }, getPosts
-// )
+//     }
+// ).then(getPosts)
+// .catch(err => {
+//     console.log(err)
+// })
+
+const promise1 = new Promise((resolve, reject) => {
+    reject('in the reject param')
+    resolve('this is the resolve function parameter');
+})
+const promise2 = new Promise((resolve, reject) => {
+    resolve(10);
+})
+const promise3 = new Promise((resolve, reject) => {
+    setTimeout(resolve, 0, 'resolve param in settimeout')
+})
+
+Promise.all([promise1, promise2, promise3])
+    .then(() => {
+        console.log('this is the Promise.all kaam')
+    })
+    .catch(err => {
+        console.log(err);
+    })

@@ -26,11 +26,8 @@ const createPosts = (post, callback) => {
     }, 2000); //this, here, is the reason the third post does not go up on the web page. although, the posts array, now has three posts, the rendition of posts array, displayed in the dom element only had two, because of less time delay
 }
 
-const bttnval = document.querySelector('.bttn__main')
-// bttnval.addEventListener('click', getPosts)
 createPosts({
     title : 'title 3',
     body : 'this is the body of the 3rd post'
 }, getPosts);
 // getPosts();
-
