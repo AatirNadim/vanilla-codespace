@@ -15,13 +15,15 @@ const getPosts = () => {
         })
         const ul = document.querySelector('.ul__main')
         ul.innerHTML = res;
-    }, 2000)
+    }, 1000)
 }
 
-const createPosts = (post) => {
+const createPosts = (post, callback) => {
     setTimeout(() => {
         posts.push(post);
-    }, 3000); //this, here, is the reason the third post does not go up on the web page. although, the posts array, now has three posts, the rendition of posts array, displayed in the dom element only had two, because of less time delay
+        callback();
+        console.log('check the nested settimeout    ')
+    }, 2000); //this, here, is the reason the third post does not go up on the web page. although, the posts array, now has three posts, the rendition of posts array, displayed in the dom element only had two, because of less time delay
 }
 
 const bttnval = document.querySelector('.bttn__main')
@@ -29,6 +31,6 @@ const bttnval = document.querySelector('.bttn__main')
 createPosts({
     title : 'title 3',
     body : 'this is the body of the 3rd post'
-});
-getPosts();
+}, getPosts);
+// getPosts();
 
