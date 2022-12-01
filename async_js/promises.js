@@ -38,7 +38,7 @@ const createPosts = (post) => {
 // })
 
 const promise1 = new Promise((resolve, reject) => {
-    reject('in the reject param')
+    // reject('in the reject param')
     resolve('this is the resolve function parameter');
 })
 const promise2 = new Promise((resolve, reject) => {
@@ -48,9 +48,12 @@ const promise3 = new Promise((resolve, reject) => {
     setTimeout(resolve, 0, 'resolve param in settimeout')
 })
 
-Promise.all([promise1, promise2, promise3])
-    .then(() => {
+const promise4 = fetch('https://jsonplaceholder.typicode.com/posts/').then(response => response.json())
+
+Promise.all([promise1, promise2, promise3, promise4])
+    .then((vall_arr) => {
         console.log('this is the Promise.all kaam')
+        console.log(vall_arr)
     })
     .catch(err => {
         console.log(err);
