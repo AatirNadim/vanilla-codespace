@@ -36,7 +36,18 @@ const init = async () => {
     })
 
     console.log('this logging command will execute after the await statement has been interpreted since the createPosts() function returns a promise')
-    await getPosts();
+    getPosts();
 }
 
 init()
+
+
+
+
+const fetchData = async () => {
+    const res = await fetch('https://jsonplaceholder.typicode.com/posts/');
+    const data = await res.json();
+    console.log(data);
+}
+
+fetchData();
